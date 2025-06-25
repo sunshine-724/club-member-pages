@@ -1,0 +1,323 @@
+/* style.css - プロフィール特化版基本スタイル */
+
+/* 全体的な設定 */
+body {
+    font-family: 'Inter', sans-serif; /* プロフェッショナルな印象のフォント */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6; /* 控えめな背景色 */
+    margin: 0;
+    padding: 0;
+}
+
+/* ヘッダーセクション */
+.profile-header {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); /* グラデーション背景 */
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden; /* 画像のはみ出し防止 */
+}
+
+.header-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* デフォルトは縦並び */
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* 丸いアバター */
+    border: 5px solid #2ecc71; /* アクセントカラーのボーダー */
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.6); /* 輝くような影 */
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.profile-name {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: -0.05em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.profile-tagline {
+    font-size: 1.2em;
+    color: #bdc3c7;
+    margin-bottom: 10px;
+}
+
+.profile-role {
+    font-weight: bold;
+    color: #2ecc71; /* アクセントカラー */
+}
+
+.profile-affiliation {
+    font-style: italic;
+}
+
+.profile-caption {
+    font-size: 1.1em;
+    color: #ecf0f1;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* メインコンテンツエリア */
+.profile-main {
+    max-width: 900px;
+    margin: -60px auto 40px auto; /* ヘッダーに少し重ねる */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 10;
+}
+
+/* 各セクションの共通スタイル */
+.profile-section {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #e0e0e0; /* 点線区切り */
+}
+
+.profile-section:last-of-type {
+    border-bottom: none; /* 最後のセクションは区切り線なし */
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.section-title {
+    font-size: 2.2em;
+    font-weight: 600;
+    color: #2980b9; /* 青系の見出し色 */
+    border-left: 5px solid #2ecc71; /* 左側にアクセントライン */
+    padding-left: 15px;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.section-content p {
+    margin-bottom: 15px;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* スキルセクションのグリッドレイアウト */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.skill-category h3 {
+    font-size: 1.4em;
+    color: #34495e;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.skill-category ul {
+    list-style: none; /* デフォルトのリストスタイルを解除 */
+    padding: 0;
+}
+
+.skill-category ul li {
+    background-color: #ecf0f1; /* リストアイテムの背景色 */
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    font-size: 0.95em;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skill-category ul li::before {
+    content: "🚀"; /* アイコン風の絵文字 */
+    font-size: 0.8em;
+}
+
+/* プロジェクトセクションのリスト */
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.project-item {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.project-item h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.project-item h3 a {
+    color: #2980b9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-item h3 a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.project-description {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.project-tech-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tech-list li {
+    background-color: #2ecc71;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+/* 経歴セクションのリスト */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experience-item h3 {
+    font-size: 1.2em;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+.experience-item p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* SNS/連絡先リンク */
+.social-links p a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.social-links p a:hover {
+    text-decoration: underline;
+    color: #3498db;
+}
+
+.note {
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* フッター */
+.profile-footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    color: #7f8c8d;
+    font-size: 0.9em;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-main {
+        margin-top: -40px;
+        padding: 20px;
+    }
+    .profile-avatar {
+        width: 120px;
+        height: 120px;
+    }
+    .profile-name {
+        font-size: 2.5em;
+    }
+    .profile-tagline {
+        font-size: 1em;
+    }
+    .profile-caption {
+        font-size: 1em;
+    }
+    .section-title {
+        font-size: 1.8em;
+    }
+    .skill-grid {
+        grid-template-columns: 1fr; /* 1列にする */
+    }
+    .project-item, .experience-item {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-header {
+        padding: 30px 15px;
+    }
+    .profile-name {
+        font-size: 2em;
+    }
+    .profile-tagline {
+        font-size: 0.9em;
+    }
+    .profile-caption {
+        font-size: 0.9em;
+    }
+    .profile-main {
+        padding: 15px;
+        margin-top: -30px;
+    }
+    .section-title {
+        font-size: 1.5em;
+        padding-left: 10px;
+    }
+    .section-content p {
+        font-size: 0.9em;
+    }
+    .skill-category h3 {
+        font-size: 1.2em;
+    }
+    .skill-category ul li {
+        font-size: 0.85em;
+        padding: 6px 10px;
+    }
+}
